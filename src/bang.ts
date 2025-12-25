@@ -1,6 +1,16 @@
 // This file was (mostly) ripped from https://duckduckgo.com/bang.js
 
 export const bangs = [
+  // Custom bang for searching arch-err's GitHub repositories
+  {
+    c: "Tech",
+    d: "github.com",
+    r: 0,
+    s: "My GitHub Repos",
+    sc: "Code",
+    t: "repo",
+    u: "https://github.com/arch-err?tab=repositories&q={{{s}}}",
+  },
   {
     c: "AI",
     d: "www.t3.chat",
