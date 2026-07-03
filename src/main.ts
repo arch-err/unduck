@@ -44,7 +44,7 @@ function noSearchDefaultPageRender() {
   });
 }
 
-const LS_DEFAULT_BANG = localStorage.getItem("default-bang") ?? "g";
+const LS_DEFAULT_BANG = localStorage.getItem("default-bang") ?? "qwant";
 const defaultBang = bangs.find((b) => b.t === LS_DEFAULT_BANG);
 
 function getBangredirectUrl() {
@@ -68,7 +68,7 @@ function getBangredirectUrl() {
     return selectedBang ? `https://${selectedBang.d}` : null;
 
   // Format of the url is:
-  // https://www.google.com/search?q={{{s}}}
+  // https://www.qwant.com/?q={{{s}}}
   const searchUrl = selectedBang?.u.replace(
     "{{{s}}}",
     // Replace %2F with / to fix formats like "!ghr+t3dotgg/unduck"
